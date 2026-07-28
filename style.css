@@ -1,0 +1,161 @@
+/* Ad Astra Latin Tutoring
+   Main stylesheet
+*/
+
+/* Import elegant academic fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+
+/* General styling */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #FAF8F3;
+    color: #2E2E2E;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+}
+
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #12263A;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+
+/* Layout */
+
+header {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background:
+        linear-gradient(rgba(18,38,58,0.65), rgba(18,38,58,0.65)),
+        url('images/parthenon.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+header h1 {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.5rem;
+    color: white;
+}
+
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 4rem 2rem;
+}
+
+
+section {
+    margin-bottom: 5rem;
+}
+
+
+/* Hero quote */
+
+.hero-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-style: italic;
+    margin-top: 2rem;
+}
+
+
+/* Buttons */
+
+.button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.9rem 2rem;
+    background-color: #B08D57;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 3px;
+}
+
+.button:hover {
+    opacity: 0.85;
+}
+
+
+/* Tuition lists */
+
+ul {
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+
+/* Contact */
+
+.contact {
+    text-align: center;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #12263A;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+
+/* Mobile adjustments */
+
+@media (max-width: 700px) {
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+
+    main {
+        padding: 2rem 1.2rem;
+    }
+
+}
