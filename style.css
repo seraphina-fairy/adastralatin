@@ -1,161 +1,583 @@
-/* Ad Astra Latin Tutoring
-   Main stylesheet
-*/
+/* ===================================
+   Ad Astra Latin Tutoring
+   Version 2 Stylesheet
+   Part 1: Foundation, Navigation & Hero
+   =================================== */
 
-/* Import elegant academic fonts */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
-
-/* General styling */
+/* ---------- Base ---------- */
 
 * {
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    background-color: #FAF8F3;
-    color: #2E2E2E;
-    font-family: 'Inter', sans-serif;
+    background-color: #f8f5ee;
+    color: #18283a;
+    font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
     line-height: 1.7;
 }
 
-h1, h2, h3 {
-    font-family: 'Cormorant Garamond', serif;
-    color: #12263A;
-    line-height: 1.2;
-}
-
-h1 {
-    font-size: 4rem;
+h1,
+h2,
+h3,
+.brand {
+    font-family: "Cormorant Garamond", "Times New Roman", serif;
     font-weight: 600;
+    color: #12263a;
 }
 
 h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
-h3 {
-    font-size: 1.8rem;
+p {
+    font-size: 1.05rem;
+}
+
+a {
+    color: inherit;
 }
 
 
-/* Layout */
+/* ---------- Navigation ---------- */
 
-header {
-    min-height: 90vh;
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1.2rem 5%;
+    
+    background: rgba(248, 245, 238, 0.94);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(176, 141, 87, 0.55);
+}
+
+
+.brand {
+    font-size: 1.8rem;
+    letter-spacing: 0.02em;
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 2.2rem;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #18283a;
+
+    transition: color 0.3s ease;
+}
+
+
+.nav-links a:hover {
+    color: #b08d57;
+}
+
+
+/* ---------- Hero ---------- */
+
+.hero {
+
+    min-height: calc(100vh - 80px);
+
+    display: flex;
     justify-content: center;
     align-items: center;
+
     text-align: center;
-    padding: 2rem;
-    background:
-        linear-gradient(rgba(18,38,58,0.65), rgba(18,38,58,0.65)),
-        url('images/parthenon.jpg');
+
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            rgba(18, 38, 58, 0.45),
+            rgba(18, 38, 58, 0.45)
+        ),
+        url("images/parthenon.jpg");
+
     background-size: cover;
     background-position: center;
+
     color: white;
 }
 
-header h1 {
-    color: white;
-    margin-bottom: 0.5rem;
+
+.hero-content {
+
+    max-width: 850px;
+
+    padding: 2rem;
+
 }
 
-header p {
+
+.hero h1 {
+
+    color: white;
+
+    font-size: clamp(3rem, 6vw, 5rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 1.5rem;
+
+}
+
+
+.subtitle {
+
+    font-size: 1.25rem;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    margin-bottom: 2.5rem;
+
+}
+
+
+.quote {
+
+    font-family: "Cormorant Garamond", serif;
+
     font-size: 1.5rem;
+
+    margin-bottom: 2rem;
+
+}
+
+
+.quote span {
+
+    font-size: 1rem;
+
+}
+
+
+.tagline {
+
+    font-size: 1.25rem;
+
+    margin-bottom: 2.5rem;
+
+}
+
+
+/* ---------- Buttons ---------- */
+
+
+.button {
+
+    display: inline-block;
+
+    padding: 0.9rem 2.2rem;
+
+    background-color: #b08d57;
+
     color: white;
+
+    text-decoration: none;
+
+    font-size: 1rem;
+
+    letter-spacing: 0.05em;
+
+    transition: all 0.3s ease;
+
 }
 
 
-main {
-    max-width: 1100px;
-    margin: auto;
-    padding: 4rem 2rem;
+.button:hover {
+
+    background-color: #967344;
+
+    transform: translateY(-2px);
+
 }
+
+
+/* ---------- General Sections ---------- */
 
 
 section {
-    margin-bottom: 5rem;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 6rem 5%;
+
 }
 
 
-/* Hero quote */
+.content {
 
-.hero-quote {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
-    font-style: italic;
-    margin-top: 2rem;
+    max-width: 800px;
+
+    margin: 0 auto;
+
 }
 
 
-/* Buttons */
+.text {
 
-.button {
-    display: inline-block;
-    margin-top: 2rem;
-    padding: 0.9rem 2rem;
-    background-color: #B08D57;
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    border-radius: 3px;
-}
+    text-align: left;
 
-.button:hover {
-    opacity: 0.85;
 }
 
 
-/* Tuition lists */
+strong {
 
-ul {
-    padding-left: 1.5rem;
+    font-weight: 600;
+
 }
 
-li {
+/* ===================================
+   Part 2: Experience, Tuition, Contact
+   & Responsive Design
+   =================================== */
+
+
+/* ---------- Experience Timeline ---------- */
+
+.timeline {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+
+.timeline-item {
+
+    padding: 2rem 0;
+
+    border-bottom: 1px solid rgba(176, 141, 87, 0.35);
+
+}
+
+
+.timeline-item:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.timeline-item h3 {
+
+    color: #b08d57;
+
+    font-size: 1.4rem;
+
     margin-bottom: 0.5rem;
+
 }
 
 
-/* Contact */
+.timeline-item h4 {
 
-.contact {
+    font-size: 1.6rem;
+
+    margin: 0.5rem 0;
+
+}
+
+
+.timeline-item ul {
+
+    padding-left: 1.5rem;
+
+}
+
+
+.timeline-item li {
+
+    margin-bottom: 0.6rem;
+
+}
+
+
+
+/* ---------- Tuition Cards ---------- */
+
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 3rem;
+
+}
+
+
+.card {
+
+    padding: 2.5rem;
+
+    background-color: rgba(255, 255, 255, 0.45);
+
+    border-top: 3px solid #b08d57;
+
+}
+
+
+.card h3 {
+
+    font-size: 2rem;
+
+    margin-top: 0;
+
+}
+
+
+.card ul {
+
+    padding-left: 1.5rem;
+
+}
+
+
+.card li {
+
+    margin-bottom: 0.7rem;
+
+}
+
+
+
+/* ---------- Contact ---------- */
+
+
+#contact {
+
     text-align: center;
+
 }
 
 
-/* Footer */
+.contact-intro {
+
+    font-size: 1.2rem;
+
+    margin-bottom: 1.5rem;
+
+}
+
+
+.email a {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.8rem;
+
+    color: #b08d57;
+
+    text-decoration: none;
+
+}
+
+
+.email a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+
+/* ---------- Footer ---------- */
+
 
 footer {
-    background-color: #12263A;
-    color: white;
+
     text-align: center;
+
     padding: 2rem;
+
+    background-color: #12263a;
+
+    color: #f8f5ee;
+
+    font-size: 0.9rem;
+
 }
 
 
-/* Mobile adjustments */
 
-@media (max-width: 700px) {
+/* ---------- Responsive Design ---------- */
 
-    h1 {
-        font-size: 2.8rem;
+
+@media (max-width: 800px) {
+
+
+    .navbar {
+
+        flex-direction: column;
+
+        gap: 0.8rem;
+
+        padding: 1rem;
+
     }
+
+
+    .brand {
+
+        font-size: 1.6rem;
+
+        text-align: center;
+
+    }
+
+
+    .nav-links {
+
+        gap: 1.2rem;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+
+    .nav-links a {
+
+        font-size: 0.9rem;
+
+    }
+
+
+    .hero {
+
+        min-height: calc(100vh - 120px);
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 3rem;
+
+    }
+
+
+    .subtitle {
+
+        font-size: 1rem;
+
+    }
+
+
+    section {
+
+        padding: 4rem 6%;
+
+    }
+
 
     h2 {
-        font-size: 2rem;
+
+        font-size: 2.3rem;
+
     }
 
-    header p {
-        font-size: 1.2rem;
+
+    .cards {
+
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+
     }
 
-    main {
-        padding: 2rem 1.2rem;
+
+    .card {
+
+        padding: 2rem;
+
+    }
+
+
+    .text {
+
+        text-align: left;
+
+    }
+
+
+}
+
+
+
+/* ---------- Small Mobile ---------- */
+
+
+@media (max-width: 480px) {
+
+
+    .hero-content {
+
+        padding: 1.5rem;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 2.5rem;
+
+    }
+
+
+    .quote {
+
+        font-size: 1.3rem;
+
+    }
+
+
+    .tagline {
+
+        font-size: 1.1rem;
+
+    }
+
+
+    .button {
+
+        padding: 0.8rem 1.8rem;
+
+    }
+
+
+    .email a {
+
+        font-size: 1.4rem;
+
+        word-break: break-word;
+
     }
 
 }
